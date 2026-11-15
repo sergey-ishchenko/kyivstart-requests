@@ -1,0 +1,28 @@
+{
+  "name": "kyivstar-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Telegram-бот для майстрів Київстар (м. Шостка): заявки, оптимальний маршрут, звіти",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:poll": "node scripts/dev-polling.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate:local": "wrangler d1 migrations apply kyivstar-bot --local",
+    "db:migrate:remote": "wrangler d1 migrations apply kyivstar-bot --remote",
+    "deploy": "wrangler deploy",
+    "webhook:set": "node --env-file=.env.production scripts/set-webhook.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "grammy": "^1.46.0"
+  },
+  "devDependencies": {
+    "miniflare": "^5.20261113.0-beta",
+    "vitest": "^4.1.12",
+    "wrangler": "^4.162.0"
+  }
+}

@@ -1,0 +1,9 @@
+# Скопіюйте у .dev.vars (файл не комітиться) і заповніть.
+# Токен ТЕСТОВОГО бота від @BotFather — для npm run dev:poll
+BOT_TOKEN="123456:ABC..."
+# Будь-який випадковий рядок (A-Z, a-z, 0-9, _ та -)
+WEBHOOK_SECRET="change-me"
+# Ключ OpenRouteService (https://openrouteservice.org/dev/#/signup)
+ORS_API_KEY=""
+# Ваш Telegram ID (перекриває значення з wrangler.jsonc)
+ADMIN_IDS=""
