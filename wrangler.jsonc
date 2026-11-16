@@ -1,24 +1,28 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "kyivstar-bot",
-  "main": "src/index.js",
-  "compatibility_date": "2026-11-01",
-  "observability": { "enabled": true },
-  "triggers": {
-    // щохвилини — черга геокодингу; 01:00 UTC — прибирання старих заявок
-    "crons": ["* * * * *", "0 1 * * *"]
-  },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "kyivstar-bot",
-      // замінити на id з `npx wrangler d1 create kyivstar-bot`
-      "database_id": "00000000-0000-0000-0000-000000000000",
-      "migrations_dir": "migrations"
-    }
-  ],
-  "vars": {
-    // Telegram ID адміністраторів через кому
-    "ADMIN_IDS": ""
-  }
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "kyivstart-requests",
+	"main": "src/index.js",
+	"compatibility_date": "2026-11-01",
+	"observability": {
+		"enabled": true
+	},
+	"triggers": {
+		// щохвилини — черга геокодингу; 01:00 UTC — прибирання старих заявок
+		"crons": [
+			"* * * * *",
+			"0 1 * * *"
+		]
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "kyivstar-bot",
+			"database_id": "5ab6fab9-8ef2-4915-94e0-3004c560767f",
+			"migrations_dir": "migrations"
+		}
+	],
+	"vars": {
+		// Telegram ID адміністраторів через кому
+		"ADMIN_IDS": ""
+	}
 }
